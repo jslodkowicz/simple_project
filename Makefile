@@ -21,3 +21,12 @@ docker_run: docker_build
 		--name wea_project_dev \
 			-p 5000:5000 \
 			-d wea_project
+
+USERNAME=jslodkowicz
+TAG=$(USERNAME)/wea_project
+
+docker_push: docker_build
+	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
+	docker tag wea_project $(TAG); \
+	docker push $(TAG); \
+	docker logout;
