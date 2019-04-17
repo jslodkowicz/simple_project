@@ -10,5 +10,3 @@ script:
   - make lint
   - make docker_build
   - make docker_push
-after_success:
-  - make docker_build
