@@ -12,3 +12,12 @@ run:
 
 test:
 	python3 -m pytest test/test_fun.py
+
+docker_build:
+	docker build -t wea_project .
+
+docker_run: docker_build
+	docker run \
+		--name wea_project_dev \
+			-p 5000:5000 \
+			-d wea_project
