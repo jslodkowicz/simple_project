@@ -1,6 +1,6 @@
 Simple Flask Weather App
 ========================
-
+   
 Prosta aplikacja wyświetlająca aktualną pogodę w podanym mieście
 
 - Tworzymy, aktywujemy i konfigurujemy wirtualne środowisko:
