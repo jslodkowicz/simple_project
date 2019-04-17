@@ -1,4 +1,4 @@
-.PHONY: weather
+.PHONY: test
 
 deps:
 	pip install -r requirements.txt
@@ -7,3 +7,5 @@ deps:
 run:
 	PYTHONPATH=. FLASK_APP=weather flask run
 
+test:
+	python3 -m pytest test/test_fun.py

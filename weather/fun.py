@@ -1,5 +1,5 @@
 from weather import app
-from flask import request
+from flask import request, jsonify
 
 @app.route('/')
 def home():
@@ -9,6 +9,10 @@ def home():
         <button type="submit" name="submit">Submit</button>
     </form>
     '''
+
+@app.route('/json')
+def json_page():
+    return jsonify({"message": "what's your weather?"})
 
 @app.route('/result', methods=['POST'])
 def get_id():
