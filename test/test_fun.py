@@ -1,5 +1,5 @@
 import sys
-sys.path.append('..')
+sys.path.append('..') # noqa
 from weather import app
 import unittest
 import json
@@ -23,6 +23,7 @@ class FunTest(unittest.TestCase):
             json.loads(resp.get_data()),
             {"message": "what's your weather?"}
         )
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=3)
