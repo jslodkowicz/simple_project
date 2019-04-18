@@ -1,8 +1,8 @@
 SERVICE_NAME=wea_project
+
 MY_DOCKER_NAME=$(SERVICE_NAME)
 
-.PHONY: test
-.DEFAULT_GOAL := test
+.PHONY: test deps
 
 deps:
 	pip install -r requirements.txt; \
@@ -37,6 +37,7 @@ TAG=$(USERNAME)/$(MY_DOCKER_NAME)
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
+	
 	docker tag $(MY_DOCKER_NAME) $(TAG); \
 	docker push $(TAG); \
 	docker logout;
