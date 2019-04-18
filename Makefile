@@ -1,4 +1,8 @@
+SERVICE_NAME=wea_project
+MY_DOCKER_NAME=$(SERVICE_NAME)
+
 .PHONY: test
+.DEFAULT_GOAL := test
 
 deps:
 	pip install -r requirements.txt; \
@@ -17,19 +21,22 @@ test_smoke:
 	curl --fail 127.0.0.1:5000
 
 docker_build:
-	docker build -t wea_project .
+	docker build -t $(MY_DOCKER_NAME) .
 
 docker_run: docker_build
 	docker run \
-		--name wea_project_dev \
+		--name $(SERVICE_NAME)_dev \
 			-p 5000:5000 \
-			-d wea_project
+			-d $(MY_DOCKER_NAME)
+
+docker_stop:
+	docker stop $(SERVICE_NAME)_dev
 
 USERNAME=jslodkowicz
-TAG=$(USERNAME)/wea_project
+TAG=$(USERNAME)/$(MY_DOCKER_NAME)
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
-	docker tag wea_project $(TAG); \
+	docker tag $(MY_DOCKER_NAME) $(TAG); \
 	docker push $(TAG); \
 	docker logout;
