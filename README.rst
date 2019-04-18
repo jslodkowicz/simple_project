@@ -6,6 +6,7 @@ Prosta aplikacja wyświetlająca aktualną pogodę w podanym mieście
 - Tworzymy, aktywujemy i konfigurujemy wirtualne środowisko:
 
   ::
+
     virtualenv venv
     source venv/bin/activate
     make deps
@@ -13,11 +14,13 @@ Prosta aplikacja wyświetlająca aktualną pogodę w podanym mieście
 - Uruchamianie aplikacji:
 
   ::
+
     make run
 
 - Uruchamianie testów
 
   ::
+
     make test
     make smoke_test
     make lint
@@ -25,10 +28,12 @@ Prosta aplikacja wyświetlająca aktualną pogodę w podanym mieście
 - Uruchamianie / Zatrzymywanie Dockera
 
   ::
+
     make docker_run
     make docker_stop
 
 - Deployment do Dockera
 
   ::
+  
     make docker_push
