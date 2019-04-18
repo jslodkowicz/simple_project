@@ -1,4 +1,4 @@
-SERVICE NAME=wea_project
+SERVICE NAME=wea-project
 MY_DOCKER_NAME=$(SERVICE_NAME)
 
 
