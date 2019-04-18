@@ -1,12 +1,14 @@
 language: python
 services:
-  - docker
+- docker
 python:
-  - "3.6"
+- '3.6'
 install:
-  - make deps
+- make deps
 script:
-  - make test
-  - make lint
-  - make docker_build
-  - make docker_push
+- make test
+- make lint
+- make docker_build
+- make docker_push
+dd:
+  secure: gOG020BIY6fmfuwxAWQK5JA5UfKTJWRwyPruX7FaBAWO4ufHGSzY3vHjbJLft7cgcG3AjbkftokfndMfP99GlOtXJC87mnTaMCEL2YxK9Vs61RsKk48kvA43GvwBnJZF+pSWaaN8/WEBrRlOgcWwTyYM7se9nbnSgfHSzUj05zidhZbrDeodo/8ZbsvfoEmzQlAP1N/ragvNFJIAqvaRSUEve69j8Krk+lDNd9jrK7wXGU1CWzlNIlB2/9zdSdyNr5QZK0Urauup05vj1+dUssajDpBYmwdLBBZixgDnOqM3D/KTXDmhqBP7CJgKUSopohx08sO1P8HTTE+rgclOlzIMseZlpc/gjc8I2+liqW4jukqJtPIxLpC6XJtwYsqud7sURO1+Q6O9rqK+/fVcZo9DyXsOmeFiM08GovC94QNF8sI2F/XnXVRyQFHE79nyhOulRbqmHNTTUbPFKbtB4lt9lI6kTZzTe2dInKq0lF2U72nIqURv+fRYt2o4BeixlgrWvtEuCWNNsan0haGnGK4ep5pQSmmIkzzDK/cFCqNUZFlH3LFUy6pu1WkU5MHXB5NkO77U2kYqhnTyhoeareYb2wAbeyHPVFZbSIjJPsWlJ6hgXqu4UgS8WtBL/fGBbVUfZfWCJ4AFEC+9oUj7/zpqImhQOXPJyFRbNFoaz18=

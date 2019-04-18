@@ -13,6 +13,9 @@ run:
 test:
 	python3 -m pytest test/test_fun.py
 
+test_smoke:
+	curl --fail 127.0.0.1:5000
+
 docker_build:
 	docker build -t wea_project .
 
