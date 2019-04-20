@@ -43,3 +43,7 @@ Prosta aplikacja wyświetlająca aktualną pogodę w podanym mieście
   ::
 
     make docker_push
+
+Aplikacja automatycznie deployowana do `Heroku <https://dry-caverns-25266.herokuapp.com/>`_. z Travis-CI.
+
+Aplikacja jest monitorowana w odstępach 5-minutowych przez Statuscake.
