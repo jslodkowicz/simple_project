@@ -4,6 +4,9 @@ Simple Flask Weather App
 .. image:: https://travis-ci.org/jslodkowicz/simple_project.svg?branch=master
     :target: https://travis-ci.org/jslodkowicz/simple_project
 
+.. image:: https://app.statuscake.com/button/index.php?Track=4007025&Days=1&Design=6
+    :target: https://app.statuscake.com/
+
 Prosta aplikacja wyświetlająca aktualną pogodę w podanym mieście
 
 - Tworzymy, aktywujemy i konfigurujemy wirtualne środowisko:
