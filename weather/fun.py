@@ -14,10 +14,10 @@ def home():
 
 @app.route('/json')
 def json_page():
-    return jsonify({"message": "what's your weather?"})
+    return jsonify({"message": "what's your weather now?"})
 
 
 @app.route('/result', methods=['POST'])
 def get_id():
     id = request.form['textbox']
-    return f'Input: {id}'
+    return f'Your input: {id}'
