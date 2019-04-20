@@ -1,3 +1,6 @@
 venv
 *.pyc
 .DS_Store
+coverage.xml
+test_results.xml
+.coverage

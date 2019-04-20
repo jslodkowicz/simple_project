@@ -17,6 +17,12 @@ run:
 test:
 	python3 -m pytest test/test_fun.py
 
+test_cov:
+	python3 -m pytest --verbose -s --cov=weather test/
+
+test_xunit:
+	python3 -m pytest --verbose -s --cov=weather test/ --cov-report xml
+
 test_smoke:
 	curl --fail 127.0.0.1:5000
 
