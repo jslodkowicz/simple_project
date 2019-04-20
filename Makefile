@@ -15,13 +15,13 @@ run:
 	PYTHONPATH=. FLASK_APP=weather flask run
 
 test:
-	python3 -m pytest test/test_fun.py
+	python -m pytest test/test_fun.py
 
 test_cov:
-	python3 -m pytest --verbose -s --cov=weather test/
+	python -m pytest --verbose -s --cov=weather test/
 
 test_xunit:
-	python3 -m pytest --verbose -s --cov=weather test/ --cov-report xml
+	python -m pytest --verbose -s --cov=weather test/ --cov-report xml
 
 test_code_complexity:
 	radon cc weather
