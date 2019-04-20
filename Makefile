@@ -23,6 +23,9 @@ test_cov:
 test_xunit:
 	python3 -m pytest --verbose -s --cov=weather test/ --cov-report xml
 
+test_code_complexity:
+	radon cc weather
+
 test_smoke:
 	curl --fail 127.0.0.1:5000
 
@@ -43,7 +46,7 @@ TAG=$(USERNAME)/$(MY_DOCKER_NAME)
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
-	
+
 	docker tag $(MY_DOCKER_NAME) $(TAG); \
 	docker push $(TAG); \
 	docker logout;
