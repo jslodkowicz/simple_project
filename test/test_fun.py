@@ -21,7 +21,7 @@ class FunTest(unittest.TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertEqual(
             json.loads(resp.get_data()),
-            {"message": "what's your weather?"}
+            {"message": "what's your weather now?"}
         )
 
 
