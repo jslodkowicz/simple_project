@@ -1,15 +1,10 @@
 from weather import app
-from flask import request, jsonify
+from flask import request, jsonify, render_template
 
 
 @app.route('/')
 def home():
-    return '''
-    <form method="POST" action="/result">
-        <textarea name="textbox"></textarea>
-        <button type="submit" name="submit">Submit</button>
-    </form>
-    '''
+    return render_template("index.html")
 
 
 @app.route('/json')
