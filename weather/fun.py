@@ -14,5 +14,5 @@ def json_page():
 
 @app.route('/result', methods=['POST'])
 def get_id():
-    id = request.form['textbox']
+    id = request.form['textbox'] # noqa
     return render_template("result.html")
