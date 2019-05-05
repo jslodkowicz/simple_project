@@ -2,7 +2,7 @@ from weather import app
 from flask import request, jsonify, render_template
 
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def home():
     return render_template("index.html")
 
