@@ -28,8 +28,15 @@ Prosta aplikacja wyświetlająca aktualną pogodę w podanym mieście
   ::
 
     make test
-    make smoke_test
-    make lint
+    make test_smoke
+
+- Sprawdzanie pokrycia i code complexity
+
+  ::
+
+    make test_cov
+    make test_xunit
+    make test_code_complexity
 
 - Uruchamianie / Zatrzymywanie Dockera
 
