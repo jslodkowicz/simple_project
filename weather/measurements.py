@@ -1,4 +1,4 @@
-from app.url_requests import *
+from weather.url_requests import *
 import operator
 
 # oblicza położenie geograficzne miasta
