@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Weather</title>
+    <title>Weather in {{ name }}</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}" type="text/css">
   </head>
   <body>
     <div class="Absolute-Center">
-      <h2>Result</h2>
+      <h2>{{ temp }}</h2>
     </div>
   </body>
 </html>

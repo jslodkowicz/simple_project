@@ -7,7 +7,7 @@ from weather.measurements import *
 def city_temp(city):
     data = city_weather(city)
     main = data['main']
-    return '\nCurrent temperature in {} is {}°C, preassure: {} hPa, humidity: {}%'.format(city, main['temp'], main['pressure'], main['humidity'], key=KEY)
+    return '\nCurrent temperature in {} is {}°C, preassure: {} hPa, humidity: {}%'.format(city.capitalize(), main['temp'], main['pressure'], main['humidity'], key=KEY)
     return ['temp']
 
 
