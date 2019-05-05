@@ -15,4 +15,4 @@ def json_page():
 @app.route('/result', methods=['POST'])
 def get_id():
     id = request.form['textbox']
-    return f'Your input: {id}'
+    return render_template("result.html")

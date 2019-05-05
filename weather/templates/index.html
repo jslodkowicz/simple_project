@@ -2,15 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Weather</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}" type="text/css">
   </head>
   <body>
-    Enter your city:
-    <form method="post" action="/result">
-      <div class="">
+    <div class="Absolute-Center">
+      <h1>Enter your city:</h1>
+      <form method="post" action="/result">
         <input type="text" name="textbox" placeholder="City"></textarea>
         <button type="submit" name="submit">Submit</button>
-      </div>
-    </form>
+      </form>
+    </div>
   </body>
 </html>
