@@ -1,5 +1,8 @@
 from weather import app
 from flask import request, jsonify, render_template
+from weather.url_requests import *
+from weather.measurements import *
+from weather.func import *
 
 
 @app.route('/', methods=['POST', 'GET'])
@@ -14,5 +17,6 @@ def json_page():
 
 @app.route('/result', methods=['POST'])
 def get_id():
-    id = request.form['textbox'] # noqa
-    return render_template("result.html")
+    city = request.form['textbox']
+    return city_temp(city)
+    # return render_template("result.html")
