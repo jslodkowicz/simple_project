@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Weather</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}" type="text/css">
-  </head>
-  <body>
-    <div class="Absolute-Center">
-      <h1>Enter your city:</h1>
-      <form method="post" action="/result">
-        <input type="text" name="textbox" placeholder="City"></textarea>
-        <button type="submit" name="submit">Submit</button>
-      </form>
-    </div>
-  </body>
-</html>
+{% extends "layout.html" %}
+{% block title %}Weather{% endblock %}
+{% block content %}
+  <h1>Enter your city:</h1>
+  <form method="post" action="/result">
+    <input type="text" name="textbox" placeholder="City"></textarea>
+    <button type="submit" name="submit">Submit</button>
+  </form>
+{% endblock %}

@@ -18,8 +18,9 @@ def json_page():
 
 @app.route('/result', methods=['POST'])
 def new_fun():
-    city = request.form['textbox']
+    city = request.form.get('textbox')
     return get_id(city)
+
 
 @app.route('/<string:name>')
 def get_id(name):

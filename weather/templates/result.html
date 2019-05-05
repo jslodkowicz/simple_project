@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Weather in {{ name }}</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}" type="text/css">
-  </head>
-  <body>
-    <div class="Absolute-Center">
+{% extends "layout.html" %}
+{% block title %}Weather in {{ name }}{% endblock %}
+{% block content %}
       <h2>{{ temp }}</h2>
-    </div>
-  </body>
-</html>
+{% endblock %}
